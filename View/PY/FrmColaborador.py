@@ -18,7 +18,7 @@ class Ui_FrmColaborador(object):
         FrmAdmin.setMinimumSize(QtCore.QSize(1091, 611))
         FrmAdmin.setMaximumSize(QtCore.QSize(1091, 611))
         icon = QtGui.QIcon()
-   
+        icon.addPixmap(QtGui.QPixmap(":/icones/P em png.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         FrmAdmin.setWindowIcon(icon)
         FrmAdmin.setIconSize(QtCore.QSize(50, 50))
         self.centralwidget = QtWidgets.QWidget(FrmAdmin)
@@ -146,7 +146,7 @@ class Ui_FrmColaborador(object):
         self.pg_home.setObjectName("pg_home")
         self.label = QtWidgets.QLabel(self.pg_home)
         self.label.setGeometry(QtCore.QRect(260, 30, 481, 461))
-
+        self.label.setStyleSheet("background-image: url(:/icones/logo.png);")
         self.label.setText("")
         self.label.setObjectName("label")
         self.funcoes = QtWidgets.QStackedWidget(self.pg_home)
@@ -177,7 +177,7 @@ class Ui_FrmColaborador(object):
         self.lbl_imagem3.setGeometry(QtCore.QRect(15, 240, 61, 61))
         self.lbl_imagem3.setStyleSheet("")
         self.lbl_imagem3.setText("")
-   
+        self.lbl_imagem3.setPixmap(QtGui.QPixmap(":/icones/sugestões.png"))
         self.lbl_imagem3.setScaledContents(True)
         self.lbl_imagem3.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_imagem3.setObjectName("lbl_imagem3")
@@ -185,7 +185,7 @@ class Ui_FrmColaborador(object):
         self.lbl_imagem2.setGeometry(QtCore.QRect(10, 160, 71, 71))
         self.lbl_imagem2.setStyleSheet("")
         self.lbl_imagem2.setText("")
-
+        self.lbl_imagem2.setPixmap(QtGui.QPixmap(":/icones/ambiente.png"))
         self.lbl_imagem2.setScaledContents(True)
         self.lbl_imagem2.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_imagem2.setObjectName("lbl_imagem2")
@@ -199,7 +199,7 @@ class Ui_FrmColaborador(object):
         self.lbl_imagem1.setGeometry(QtCore.QRect(10, 90, 71, 71))
         self.lbl_imagem1.setStyleSheet("")
         self.lbl_imagem1.setText("")
- 
+        self.lbl_imagem1.setPixmap(QtGui.QPixmap(":/icones/onibus.png"))
         self.lbl_imagem1.setScaledContents(True)
         self.lbl_imagem1.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextSelectableByMouse)
         self.lbl_imagem1.setObjectName("lbl_imagem1")
@@ -213,7 +213,7 @@ class Ui_FrmColaborador(object):
         self.lbl_logo.setGeometry(QtCore.QRect(70, 230, 311, 311))
         self.lbl_logo.setStyleSheet("")
         self.lbl_logo.setText("")
-  
+        self.lbl_logo.setPixmap(QtGui.QPixmap(":/icones/logo_branco.png"))
         self.lbl_logo.setScaledContents(True)
         self.lbl_logo.setObjectName("lbl_logo")
         self.lbl_titulo.raise_()
@@ -2497,14 +2497,18 @@ class Ui_FrmColaborador(object):
 
     def retranslateUi(self, FrmAdmin):
         _translate = QtCore.QCoreApplication.translate
-        FrmAdmin.setWindowTitle(_translate("FrmAdmin", "Gerenciamento de Estoque"))
+        FrmAdmin.setWindowTitle(_translate("FrmAdmin", "PyStock"))
         self.btn_home.setToolTip(_translate("FrmAdmin", "Home"))
         self.btn_Vendas.setToolTip(_translate("FrmAdmin", "Vendas"))
         self.btn_produtos.setToolTip(_translate("FrmAdmin", "Produtos"))
         self.lbl_seja_bem_vindo.setText(_translate("FrmAdmin", "Seja bem-vindo(a)"))
-        self.lbl_titulo.setText(_translate("FrmAdmin", "Bem Vindo"))
-        
-        self.label_3.setText(_translate("FrmAdmin", "A melhor forma\n"
+        self.lbl_titulo.setText(_translate("FrmAdmin", "Últimas Notícias"))
+        self.lbl_noticia3.setText(_translate("FrmAdmin", "Tem alguma sugestão do que podemos melhorar?\n"
+"Se sim, deixe sua sugestão com o rh."))
+        self.lbl_noticia1.setText(_translate("FrmAdmin", "Não recebeu seu passe? Entre em contato com o rh\n"
+"via e-mail ou faça um chamado."))
+        self.lbl_noticia2.setText(_translate("FrmAdmin", "Use a vontade nossos ambientes de descontração!"))
+        self.label_3.setText(_translate("FrmAdmin", "PyStock - A melhor forma\n"
 "de gerenciar estoque!"))
         self.checkBox_finalizar_app.setText(_translate("FrmAdmin", "Finalizar aplicação após 20 minutos"))
         self.lbl_titulo_configuracoes.setText(_translate("FrmAdmin", "Configurações"))

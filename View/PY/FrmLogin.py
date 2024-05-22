@@ -113,7 +113,7 @@ class Ui_login(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-     
+        self.label_2.setText(_translate("MainWindow", "PyStock"))
         self.label_3.setText(_translate("MainWindow", "Olá caro colaborador, seja bem-vindo novamente!\n"
 "\n"
 "Caso ainda não tenha um login, contate seu super-\n"
